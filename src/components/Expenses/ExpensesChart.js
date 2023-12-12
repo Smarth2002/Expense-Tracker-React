@@ -22,7 +22,7 @@ function ExpensesChart(props) {
 
     // iterate through filteredExpenses and for each expense add its amount to its respective month object in chartDataPoints
     for (const expense of props.expenses) {
-        const expenseMonth = [expense.date.getMonth()]; // 0->jan, 1->feb, ...
+        const expenseMonth = expense.date.getMonth(); // 0->jan, 1->feb, ...
         chartDataPoints[expenseMonth].value += expense.amount;
     }
 
